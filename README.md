@@ -135,7 +135,7 @@ Create a Cluster
 Get connection string
 Paste it in .env file as MONGO_URI
 
-🔐 Authentication Flow
+### 🔐 Authentication Flow
 
 1.User registers/logs in
 
@@ -150,12 +150,18 @@ Paste it in .env file as MONGO_URI
 ## API Endpoints
 ### Authentication
 POST /api/auth/register - Register new user
+
 POST /api/auth/login - Login user
+
 ### Tasks
 GET /api/tasks - Get all tasks (with pagination)
+
 GET /api/tasks/:id - Get single task
+
 POST /api/tasks - Create task
+
 PUT /api/tasks/:id - Update task
+
 DELETE /api/tasks/:id - Delete task
 
 
@@ -176,6 +182,7 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
