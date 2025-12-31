@@ -73,19 +73,17 @@ task-manager/
 
 
 ---
-
+```
 ## ⚙️ Environment Variables
 
 Create a `.env` file inside the **backend** folder:
+```
 PORT=5000
 MONGO_URI=mongodb+srv://saurabhdwivedi2003sta_db_user:LzX76J7hwTYzYONg@saurabh1.qms2uf6.mongodb.net/
 JWT_SECRET=supersecretkey
 
-
-
-⚠️ **Note:** Never push `.env` file to GitHub.
-
 ---
+```
 
 ## ▶️ How to Run the Project Locally
 
@@ -100,7 +98,9 @@ npm install
 npm run dev
 
 Server will start at:
+```
 http://localhost:5000
+```
 
 3️⃣ Frontend Setup
 cd frontend
@@ -109,8 +109,9 @@ npm run dev
 
 
 Frontend will run at:
+```
 http://localhost:5173
-
+```
 
 🌐 MongoDB Atlas
 
@@ -144,6 +145,7 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
