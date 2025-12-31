@@ -125,61 +125,62 @@ Frontend will run at:
 http://localhost:5173
 ```
 
-🌐 MongoDB Atlas
+## 🌐 MongoDB Atlas
 
-This project uses MongoDB Atlas (Cloud Database) instead of local MongoDB.
+This project uses **MongoDB Atlas (Cloud Database)** instead of local MongoDB.
 
-Steps:
-Create a MongoDB Atlas account
-Create a Cluster
-Get connection string
-Paste it in .env file as MONGO_URI
-
-### 🔐 Authentication Flow
-
-1.User registers/logs in
-
-2.JWT token generated on backend
-
-3.Token stored on frontend
-
-4.Protected routes accessed using token
-
-5.Tasks are user-specific
-
-## API Endpoints
-### Authentication
-POST /api/auth/register - Register new user
-
-POST /api/auth/login - Login user
-
-### Tasks
-GET /api/tasks - Get all tasks (with pagination)
-
-GET /api/tasks/:id - Get single task
-
-POST /api/tasks - Create task
-
-PUT /api/tasks/:id - Update task
-
-DELETE /api/tasks/:id - Delete task
+### Setup Steps
+1. Create a MongoDB Atlas account  
+2. Create a cluster  
+3. Copy the connection string  
+4. Paste it into the `.env` file as:
 
 
-🚀 Deployment (Planned / Supported)
 
-Frontend: Vercel
+---
 
-Backend: Render
+## 🔐 Authentication Flow
 
-Database: MongoDB Atlas
+1. User registers or logs in  
+2. JWT token is generated on the backend  
+3. Token is stored on the frontend  
+4. Protected routes are accessed using the token  
+5. Tasks are user-specific and linked to the logged-in user  
 
-Project structure is fully compatible with production deployment.
+---
+
+## 🔗 API Endpoints
+
+### 🔑 Authentication
+- `POST /api/auth/register` – Register a new user  
+- `POST /api/auth/login` – Login user  
+
+---
+
+### 🗂️ Tasks
+- `GET /api/tasks` – Get all tasks (with pagination)  
+- `GET /api/tasks/:id` – Get a single task  
+- `POST /api/tasks` – Create a new task  
+- `PUT /api/tasks/:id` – Update an existing task  
+- `DELETE /api/tasks/:id` – Delete a task  
+
+---
+
+## 🚀 Deployment (Planned / Supported)
+
+- **Frontend:** Vercel  
+- **Backend:** Render  
+- **Database:** MongoDB Atlas  
+
+The project structure is fully compatible with **production deployment**.
+
 
 ## 👨‍💻 Author
 
 **Saurabh Dwivedi**  
 Full Stack Developer (MERN)  
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
