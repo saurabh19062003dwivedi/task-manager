@@ -38,6 +38,8 @@ This project allows users to create, manage, update, and track tasks efficiently
 ---
 
 ## 📁 Project Structure
+
+```text
 task-manager/
 │
 ├── backend/
@@ -142,6 +144,7 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
