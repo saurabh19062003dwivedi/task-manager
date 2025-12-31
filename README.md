@@ -92,7 +92,7 @@ JWT_SECRET=supersecretkey
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 ```
-2️⃣ Backend Setup
+###2️⃣ Backend Setup
 cd backend
 npm install
 npm run dev
@@ -102,7 +102,7 @@ Server will start at:
 http://localhost:5000
 ```
 
-3️⃣ Frontend Setup
+###3️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
@@ -125,26 +125,35 @@ Paste it in .env file as MONGO_URI
 
 🔐 Authentication Flow
 
-User registers/logs in
-JWT token generated on backend
-Token stored on frontend
-Protected routes accessed using token
-Tasks are user-specific
+1.User registers/logs in
+
+2.JWT token generated on backend
+
+3.Token stored on frontend
+
+4.Protected routes accessed using token
+
+5.Tasks are user-specific
 
 
 🚀 Deployment (Planned / Supported)
 
 Frontend: Vercel
+
 Backend: Render
+
 Database: MongoDB Atlas
 
 Project structure is fully compatible with production deployment.
 
 👨‍💻 Author
+
 Saurabh Dwivedi
+
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
