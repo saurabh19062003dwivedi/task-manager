@@ -175,13 +175,12 @@ Database: MongoDB Atlas
 
 Project structure is fully compatible with production deployment.
 
-👨‍💻 Author
+## 👨‍💻 Author
 
-Saurabh Dwivedi
-
-Full Stack Developer (MERN)
-
+**Saurabh Dwivedi**  
+Full Stack Developer (MERN)  
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
