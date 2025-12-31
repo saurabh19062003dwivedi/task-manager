@@ -92,7 +92,7 @@ JWT_SECRET=supersecretkey
 git clone https://github.com/your-username/task-manager.git
 cd task-manager
 ```
-###2️⃣ Backend Setup
+### 2️⃣ Backend Setup
 cd backend
 npm install
 npm run dev
@@ -102,7 +102,7 @@ Server will start at:
 http://localhost:5000
 ```
 
-###3️⃣ Frontend Setup
+### 3️⃣ Frontend Setup
 cd frontend
 npm install
 npm run dev
@@ -110,8 +110,10 @@ npm run dev
  2 test users
 
 All test accounts use the password respectively
+
 saurabhdwivedi2003sta@gmail.com 
 pass- 123456
+
 test@gmail.com
 pass-123
 
@@ -163,6 +165,7 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
