@@ -3,6 +3,19 @@
 A full-stack **Task Management Web Application** built using the **MERN Stack**.  
 This project allows users to create, manage, update, and track tasks efficiently with authentication support.
 
+## 🌍 Live Deployment
+
+The application has been successfully deployed and is live.
+
+- **Frontend (Vercel):**  
+  task-manager-git-main-saurabh19062003dwivedis-projects.vercel.app
+
+- **Backend (Render):**  
+  https://task-manager-backend-2jbn.onrender.com
+
+The backend APIs are accessible under the `/api` route.
+
+
 ---
 
 ## 🚀 Features
@@ -180,6 +193,7 @@ The project structure is fully compatible with **production deployment**.
 **Saurabh Dwivedi**  
 Full Stack Developer (MERN)  
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
