@@ -107,6 +107,16 @@ cd frontend
 npm install
 npm run dev
 
+ 2 test users
+
+All test accounts use the password respectively
+saurabhdwivedi2003sta@gmail.com 
+pass- 123456
+test@gmail.com
+pass-123
+
+
+
 
 Frontend will run at:
 ```
@@ -153,6 +163,7 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
 
