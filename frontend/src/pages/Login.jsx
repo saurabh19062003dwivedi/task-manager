@@ -1,84 +1,119 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import api from "../services/api";
 
 function Login() {
+  const navigate = useNavigate();
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const submitHandler = async (e) => {
     e.preventDefault();
+    setError("");
+    setLoading(true);
+
     try {
       const res = await api.post("/auth/login", { email, password });
+
       localStorage.setItem("token", res.data.token);
       localStorage.setItem("userName", res.data.user.name);
 
       navigate("/dashboard");
-    } catch {
-      setError("Invalid email or password");
+    } catch (err) {
+      setError(
+        err.response?.data?.message || "Invalid email or password"
+      );
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-100 to-indigo-200">
-      <div className="bg-white w-full max-w-md rounded-xl shadow-lg p-8">
-        {/* Title */}
-        <h2 className="text-3xl font-bold text-center text-indigo-600 mb-2">
+    <div className="min-h-screen flex items-center justify-center
+                    bg-gray-100 dark:bg-slate-900 px-4">
+      <div
+        className="w-full max-w-sm
+                   bg-white dark:bg-slate-800
+                   border border-gray-200 dark:border-slate-700
+                   rounded-xl shadow-md p-6"
+      >
+        {/* HEADING */}
+        <h2 className="text-2xl font-semibold text-center
+                       text-gray-900 dark:text-gray-100">
           Welcome Back
         </h2>
-        <p className="text-center text-gray-500 mb-6">
-          Login to manage your tasks
+
+        {/* SUB HEADING */}
+        <p className="text-sm text-center mt-2 mb-6
+                      text-gray-600 dark:text-gray-400">
+          Login to manage your tasks efficiently.
         </p>
 
-        {/* Error */}
+        {/* ERROR */}
         {error && (
-          <p className="text-red-500 text-sm text-center mb-4">{error}</p>
+          <p className="mb-4 text-sm text-red-600 dark:text-red-400 text-center">
+            {error}
+          </p>
         )}
 
-        {/* Form */}
+        {/* FORM */}
         <form onSubmit={submitHandler}>
-          <div className="mb-4">
-            <label className="block text-sm font-medium mb-1">Email</label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              required
-            />
-          </div>
+          {/* EMAIL */}
+          <input
+            type="email"
+            placeholder="Email Address"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            className="w-full mb-3 px-3 py-2 rounded-md
+                       border border-gray-300
+                       bg-white text-gray-900
+                       focus:outline-none focus:ring-2 focus:ring-blue-500
+                       dark:bg-slate-900 dark:text-gray-100
+                       dark:border-slate-600"
+          />
 
-          <div className="mb-5">
-            <label className="block text-sm font-medium mb-1">Password</label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full border px-3 py-2 rounded focus:outline-none focus:ring-2 focus:ring-indigo-400"
-              required
-            />
-          </div>
+          {/* PASSWORD */}
+          <input
+            type="password"
+            placeholder="Password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+            className="w-full mb-5 px-3 py-2 rounded-md
+                       border border-gray-300
+                       bg-white text-gray-900
+                       focus:outline-none focus:ring-2 focus:ring-blue-500
+                       dark:bg-slate-900 dark:text-gray-100
+                       dark:border-slate-600"
+          />
 
+          {/* SUBMIT */}
           <button
             type="submit"
-            className="w-full bg-indigo-600 text-white py-2 rounded font-semibold hover:bg-indigo-700 transition"
+            disabled={loading}
+            className="w-full py-2 rounded-md font-medium
+                       bg-indigo-600 text-white
+                       hover:bg-indigo-700 transition
+                       disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Login
+            {loading ? "Logging in..." : "Login"}
           </button>
         </form>
 
-        {/* Footer */}
-        <p className="text-center text-sm text-gray-600 mt-6">
-          Don’t have an account?
+        {/* REGISTER LINK */}
+        <p className="mt-5 text-sm text-center
+                      text-gray-600 dark:text-gray-400">
+          Don’t have an account?{" "}
           <Link
             to="/register"
-            className="text-indigo-600 font-semibold ml-1 hover:underline"
+            className="text-blue-600 dark:text-blue-400
+                       font-medium hover:underline"
           >
-            Register
+            Create one
           </Link>
         </p>
       </div>
