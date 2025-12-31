@@ -40,22 +40,35 @@ This project allows users to create, manage, update, and track tasks efficiently
 ## 📁 Project Structure
 task-manager/
 │
-├── frontend/
-│ ├── src/
-│ ├── public/
-│ ├── package.json
-│ └── vite.config.js
-│
 ├── backend/
-│ ├── controllers/
-│ ├── models/
-│ ├── routes/
-│ ├── middleware/
-│ ├── server.js
-│ └── package.json
+│   ├── config/
+│   ├── controllers/
+│   ├── middleware/
+│   ├── models/
+│   ├── routes/
+│   ├── node_modules/
+│   ├── .env
+│   ├── package-lock.json
+│   ├── package.json
+│   └── server.js
+│
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   └── src/
+│       ├── assets/
+│       ├── components/
+│       │   ├── modals/
+│       │   ├── navbar/
+│       │   └── tasks/
+│       ├── hooks/
+│       ├── pages/
+│       ├── services/
+│       └── utils/
 │
 ├── .gitignore
 └── README.md
+
 
 ---
 
@@ -129,5 +142,6 @@ Saurabh Dwivedi
 Full Stack Developer (MERN)
 
 GitHub: https://github.com/saurabh19062003dwivedi
+
 
 
